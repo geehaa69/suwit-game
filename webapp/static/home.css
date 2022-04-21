@@ -298,3 +298,43 @@ body {
     background-color: #EEEEEE;
     text-align: center;
 }
+
+
+
+
+
+
+/* responsive mobile */
+@media (max-width: 576px) {
+    /* input box */
+    .main form input {
+        width: 90%;    
+    }
+
+    /* pop up message */
+    .popup_box {
+        width: 90%;
+    }
+
+    /* kontennya ketengahkan dikit */
+    .main {
+        margin-top: 150px;
+    }
+
+    /* box beserta kontennya aboutnya diatur */
+    .about_box {
+        width: 90%;
+        border-radius: 18px;
+    }
+    .profile_about {
+        width: 100px;    
+        height: 100px;
+        margin: 88px 0px 40px 0px;
+    }
+    .paragraf {
+        font-size: larger;
+        text-align: center;
+        line-height: 30px;
+        margin: 0px 7% 100px 7%;
+    }
+}
