@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/home.css">
+    <title>Suit Game | Home</title>
+</head>
+<body>
+    <div class="container">
+        <!-- main cotent -->
+        <div class="main">
+            <h1>Suit Game</h1>
+
+            <form action="/game" method="post">
+                <input type="text" placeholder="Masukkan nama kamu.." name="username">
+                <button type="submit">masuk</button>
+            </form>
+        </div>
+
+        <!-- icon -->
+        <div class="about_icon">
+            <img src="../static/img/helpCenter.png" alt="icon" title="About" id="icon_about">
+        </div>
+    </div>
+
+
+    <!-- pop up box username -->
+    {% set message = get_flashed_messages(with_categories=True) %}
+    {% if message %}
+        <div id="popup" class="popup_container">
+            <div class="popup_shadow"></div>
+            
+            <div class="popup_box">
+                <h3>{{ message[0][1] }}</h3>
+            </div>
+        </div>
+    {% endif %}
+
+
+    <!-- JavaScript -->
+    <script src="../static/home.js"></script>
+</body>
+</html>

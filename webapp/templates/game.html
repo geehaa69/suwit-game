@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/game.css">
+    <title>Suit Game | Game</title>
+</head>
+<body>
+    <div class="container">
+        <div class="mainbar">
+            <div class="profile">
+                <img src="../static/img/VectorComputer.png" alt="icon">
+                <h1>Computer</h1>
+            </div>
+
+            <div class="match">
+                <div id="option_comp" class="option">
+                    <div class="kertas_gunting_batu batu"></div>
+                    <div class="kertas_gunting_batu gunting"></div>
+                    <div class="kertas_gunting_batu kertas"></div>
+                </div>
+                
+                <div class="announcement">
+                    <p>Game Match</p>
+                </div>
+                
+                <div id="option_user" class="option">
+                    <div class="kertas_gunting_batu kertas" onclick="match('kertas')"></div>
+                    <div class="kertas_gunting_batu gunting" onclick="match('gunting')"></div>
+                    <div class="kertas_gunting_batu batu" onclick="match('batu')"></div>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="../static/img/MaleUser.png" alt="icon">
+                {% set username = username.capitalize() %}
+                <h1>{{ username }}</h1>
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+            <a href="/home">
+                <div class="home"><img src="../static/img/home.png" alt="icon" title="home"></div>
+            </a>
+
+            <div class="title">
+                <h1>Game Score</h1>
+            </div>
+
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>Nama</td>
+                        <td class="titik_dua">:</td>
+                        <td class="size">{{ username }}</td>
+                    </tr>
+                    <tr>
+                        <td>Menang</td>
+                        <td class="titik_dua">:</td>
+                        <td class="size" id="win">0</td>
+                    </tr>
+                    <tr>
+                        <td>Kalah</td>
+                        <td class="titik_dua">:</td>
+                        <td class="size" id="lose">0</td>
+                    </tr>
+                    <tr>
+                        <td>Seri</td>
+                        <td class="titik_dua">:</td>
+                        <td class="size" id="draw">0</td>
+                    </tr>
+                    <tr>
+                        <td>Bermain</td>
+                        <td class="titik_dua">:</td>
+                        <td class="size" id="play">Belum bermain</td>
+                    </tr>
+                </table>
+                <button type="button" onclick="reset()">reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../static/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@font-face {
+    font-family: 'boogalooregular';
+    src: url('font/boogaloo-regular-webfont.woff2') format('woff2'),
+         url('font/boogaloo-regular-webfont.woff') format('woff'),
+         url('font/Boogaloo-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'candelabook';
+    src: url('font/CandelaBook-webfont.eot');
+    src: url('font/CandelaBook-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/CandelaBook-webfont.woff2') format('woff2'),
+         url('font/CandelaBook-webfont.woff') format('woff'),
+         url('font/CandelaBook-webfont.ttf') format('truetype'),
+         url('font/CandelaBook-webfont.svg#candelabook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: #E8C07D;
+    font-family: 'candelabook', 'Comic Sans MS', 'arial';
+}
+
+
+/* container */
+.container {
+    display: flex;
+    box-sizing: border-box;
+    background-color: purple;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+
+/* mainbar */
+.mainbar {
+    box-sizing: border-box;
+    background-color: #E8C07D;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 4px;
+    padding-top: 5px;
+    font-size: 25px;
+}
+.profile img {
+    transform: scale(.5);
+}
+
+
+.match {
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.option {
+    display: flex;
+    justify-content: space-evenly;
+}
+.kertas_gunting_batu {
+    width: 100px;
+    height: 100px;
+    background-color: #DFDFDE;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.13);
+    }
+}
+#option_user .kertas_gunting_batu:hover {
+    background-color: lightgreen;
+    transition: all .5s;
+}
+#option_user .kertas_gunting_batu:active {
+    animation: scale .5s ease 0s 1 forwards;
+}
+.batu {
+    background-image: url(img/batu.png);
+}
+.kertas {
+    background-image: url(img/kertas.png);
+}
+.gunting {
+    background-image: url(img/gunting.png);
+}
+@keyframes animation_user_choice {
+    from {
+        background-color: lightgreen;
+    }
+    to {
+        transform: rotate(1840deg);
+        background-color: lightgreen;
+    }
+}
+@keyframes animation_comp_choice {
+    from {
+        background-color: lightblue;
+    }
+    to {
+        transform: rotate(-1840deg);
+        background-color: lightcoral;
+    }
+}
+.transisi_user {
+    animation: animation_user_choice 1.5s ease 0s 1;
+    background-color: lightgreen;
+}
+.transisi_comp {
+    animation: animation_comp_choice 1.5s ease 0s 1;
+    background-color: lightcoral;
+}
+
+
+.announcement {
+    margin: 0px auto;
+    width: 92%;
+    border-radius: 25px;
+    background-color: #DFDFDE;
+}
+.announcement p {
+    font-family: 'boogalooregular', 'Comis Sans MS', 'arial', 'sans-serif';
+    color: #211F1F;
+    text-align: center;
+    font-size: 26px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    padding: 8px 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.announcement_animation:hover {
+    background-color: #DFDFDE;
+    /* transition: all .5s; */
+}
+
+
+/* sidebar */
+.sidebar {
+    box-sizing: border-box;
+    background-color: #F1DDBF;
+    min-width: 350px;
+}
+
+
+.home {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    transform: scale(.9);
+}
+
+
+.title {
+    font-family: 'boogalooregular', 'Comis Sans MS', 'arial', 'sans-serif';
+    font-size: 40px;
+    text-decoration: underline;
+    color: #211F1F;
+    margin: 12px 18px 55px;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+/* .content table, tr, td {
+    border: 1px solid black;
+} */
+.content table {
+    font-size: 18px;
+    height: 200px;
+    margin: 0px 18px 40px;
+}
+.size {
+    width: 200px;
+}
+/* .titik_dua {
+    padding-left: 15px;
+    padding-right: 5px;
+} */
+.content button {
+    align-self: center;
+    font-size: 18px;
+    width: 80px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 5px 0px;
+    background-color: #8D8DAA;
+    border-radius: 7px;
+    border: rgba(0,0,0,0);
+}
+.content button:hover {
+    transform: scale(1.09);
+    transition: all .1s;
+}
+.content button:active {
+    background-color: #DFDFDE;
+    transition: all .33s;
+}

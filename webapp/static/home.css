@@ -1,0 +1,300 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+@font-face {
+    font-family: 'boogalooregular';
+    src: url('font/boogaloo-regular-webfont.woff2') format('woff2'),
+         url('font/boogaloo-regular-webfont.woff') format('woff'),
+         url('font/Boogaloo-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'candelabook';
+    src: url('font/CandelaBook-webfont.eot');
+    src: url('font/CandelaBook-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/CandelaBook-webfont.woff2') format('woff2'),
+         url('font/CandelaBook-webfont.woff') format('woff'),
+         url('font/CandelaBook-webfont.ttf') format('truetype'),
+         url('font/CandelaBook-webfont.svg#candelabook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: #E8C07D;
+    font-family: 'candelabook', 'Comic Sans MS', 'arial';
+}
+
+
+.container {
+    /* background-color: blue; */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+.main {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 125px;
+    /* background-color: blueviolet; */
+}
+
+
+/* title */
+.main h1 {
+    font-size: 65px;
+    font-family: 'boogalooregular', 'Comis Sans MS', 'arial', 'sans-serif';
+    color: #211F1F;
+    margin-bottom: 50px;
+}
+
+
+/* form */
+.main form button, input {
+    display: block;
+    margin: 0px auto;
+}
+.main form {
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+.main form input {
+    width: 30%;    
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #EEEEEE;
+    border: 1px solid rgba(0,0,0,0);
+    padding: 5px 4px 5px 13px;
+    box-sizing: border-box;
+    margin-bottom: 35px;
+}
+.main form button {
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 10px;
+    width: 90px;
+    font-size: 20px;
+    background-color: #8D8DAA;
+    border: 1px solid rgba(0,0,0,0);
+    transition: transform 1s, ;
+}
+.main form button:hover {
+    /* transform: scale(1.06); */
+    width: 95px;
+    font-size: 21.3px;
+    text-align: center;
+    transition: .07s;
+}
+.main form button:active {
+    background-color: #EEEEEE;
+    transition: background-color .33s;
+}
+
+
+/* icon about */
+.about_icon img {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+}
+@keyframes icon_about_transition {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: rotate(300deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.about_icon img:hover {
+    animation: icon_about_transition .9s ease 1ms 1 alternate;
+}
+.about_icon img:active {
+    transform: scale(.9);
+    transition: all .3s;
+}
+
+
+/* some element from JS */
+/* shadow about box */
+.shadow_box {
+    background-color: rgba(141, 141, 170, .2);
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* box about */
+.container_about {
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+.about_box {
+    background-color: #8D8DAA;
+    margin: 0px auto;
+    width: 70%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+}
+.profile_about {
+    width: 110px;    
+    height: 110px;
+    margin: 60px 0px 60px 0px;
+}
+.paragraf {
+    font-size: larger;
+    text-align: center;
+    line-height: 30px;
+    margin: 0px 50px 100px 50px;
+}
+.instagram_account img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+}
+.instagram_account a {
+    position: absolute;
+    left: 42px;
+    bottom: 15px;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+.instagram_account a:hover {
+    color: lightblue;
+    transition: all .3s;
+}
+.github_account img {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+}
+.github_account a {
+    position: absolute;
+    right: 42px;
+    bottom: 15px;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+.github_account a:hover {
+    color: lightblue;
+    transition: all .3s;
+}
+.close_button {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.close_button:hover {
+    transform: scale(1.2);
+    transition: all .4s;
+}
+
+
+/* popup box */
+.popup_container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+}
+.popup_shadow {
+    background-color: rgba(141, 141, 170, .2);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+}
+.popup_box {
+    width: 30%;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 200px auto 0px;
+    position: relative;
+    background-color: #EEEEEE;
+    text-align: center;
+}
