@@ -72,14 +72,15 @@ table {
 body {
     background-color: #E8C07D;
     font-family: 'candelabook', 'Comic Sans MS', 'arial';
+    overflow: hidden;
 }
 
 
 /* container */
 .container {
+    overflow: hidden;
     display: flex;
     box-sizing: border-box;
-    background-color: purple;
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -148,13 +149,13 @@ body {
     animation: scale .5s ease 0s 1 forwards;
 }
 .batu {
-    background-image: url(img/batu.png);
+    background-image: url(img/batu_ori.png);
 }
 .kertas {
-    background-image: url(img/kertas.png);
+    background-image: url(img/kertas_ori.png);
 }
 .gunting {
-    background-image: url(img/gunting.png);
+    background-image: url(img/gunting_ori.png);
 }
 @keyframes animation_user_choice {
     from {
@@ -216,10 +217,12 @@ body {
 }
 
 
-.home {
+.sidebar a {
     position: absolute;
-    right: 8px;
     top: 10px;
+    right: 8px;
+}
+.sidebar a img {
     transform: scale(.9);
 }
 
@@ -270,4 +273,83 @@ body {
 .content button:active {
     background-color: #DFDFDE;
     transition: all .33s;
+}
+
+
+
+
+
+
+
+
+
+/* responsive mobile */
+@media (max-width: 576px) {
+    /* sembunyikan sidebar */
+    .sidebar {
+        position: absolute;
+        right: -10000px;
+        min-width: 85%;
+        height: 80%;
+        border-bottom-left-radius: 15px;
+    }
+
+    /* atur posisi home icon */
+    .sidebar a {
+        /* transform: translate(-50px, 500px); */
+        top: auto;
+        right: auto;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    /* kecilkan ukuran option */
+    .kertas_gunting_batu {
+        width: 75px;
+        height: 75px;
+    }
+    .match {
+        justify-content: space-around;
+    }
+    .batu {
+        background-image: url(img/batu.png);
+    }
+    .kertas {
+        background-image: url(img/kertas.png);
+    }
+    .gunting {
+        background-image: url(img/gunting.png);
+    }
+
+    /* atur jarak profilenya */
+    .profile_comp {
+        margin-top: 10px;
+    }
+    .profile_user {
+        margin-bottom: 10px;
+    }
+
+    /* buat menubar */
+    .menubar img {
+        transform: scale(.43);
+        position: absolute;
+        top: 12px;
+        right: 3px;
+    }
+    
+    /* atur atau baiki tablenya */
+    .size {
+        width: 65%
+    }
+
+    /* atur box announcement */
+    .announcement p {
+        font-size: 23px;
+        line-height: 28px;
+        padding: 11 px 10px;
+        border-radius: 17px;
+    }
+    .announcement {
+        border-radius: 17px;
+    }
 }

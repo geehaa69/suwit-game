@@ -337,4 +337,9 @@ body {
         line-height: 30px;
         margin: 0px 7% 100px 7%;
     }
+
+    /* kecilkan radius pada kolom input name */
+    .main form input {
+        border-radius: 18px;
+    }
 }

@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="mainbar">
-            <div class="profile">
+            <div class="profile profile_comp">
                 <img src="../static/img/VectorComputer.png" alt="icon">
                 <h1>Computer</h1>
             </div>
@@ -33,17 +33,17 @@
                 </div>
             </div>
 
-            <div class="profile">
+            <div class="profile profile_user">
                 <img src="../static/img/MaleUser.png" alt="icon">
                 {% set username = username.capitalize() %}
-                <h1>{{ username }}</h1>
+                <h1>{{ username.title() }}</h1>
             </div>
         </div>
 
 
         <div class="sidebar">
             <a href="/home">
-                <div class="home"><img src="../static/img/home.png" alt="icon" title="home"></div>
+                <img src="../static/img/home.png" alt="icon" title="home">
             </a>
 
             <div class="title">
@@ -82,6 +82,8 @@
             </div>
         </div>
     </div>
+
+    <div id="menu" class="menubar"><img src="../static/img/menu.png"></div>
 
     <!-- JavaScript -->
     <script src="../static/game.js"></script>

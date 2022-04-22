@@ -119,12 +119,42 @@ announcement.addEventListener('click', function() {
 
 
 function reset() {
-    let draw = 0
-    let win = 0
-    let lose = 0
-    let play = 0
-    winScore.innerHTML = 0
-    loseScore.innerHTML = 0
-    drawScore.innerHTML = 0
+    draw = 0
+    win = 0
+    lose = 0
+    play = 0
+    winScore.innerHTML = win
+    loseScore.innerHTML = lose
+    drawScore.innerHTML = draw
     playScore.innerHTML = 'Belum bermain'
 }
+
+
+const menu = document.getElementById('menu')
+const image = document.querySelector('#menu img')
+const sidebar = document.querySelector('.sidebar')
+let cekMenu = 'close'
+menu.addEventListener('click', function() {
+    if (cekMenu == 'close') {
+        image.removeAttribute('src')
+        sidebar.style.top = "0px"
+        sidebar.style.right = "0px"
+        sidebar.style.transition = "right .3s"
+        setTimeout(function() {
+            image.setAttribute('src', '../static/img/close.png')
+            image.style.transform = "scale(.6)"
+            image.style.right = "6px"
+        }, 0350)
+        cekMenu = 'open'
+    } else {
+        image.removeAttribute('src')
+        sidebar.style.right = "-10000px"
+        sidebar.style.transition = "right .5s"
+        setTimeout(function() {
+            image.setAttribute('src', '../static/img/menu.png')
+            image.style.transform = "scale(.43)"
+            image.style.right = "3px"
+        }, 0350)
+        cekMenu = 'close'
+    }
+})
