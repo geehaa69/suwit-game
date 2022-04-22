@@ -14,3 +14,7 @@ Walaupun sederhana, disini saya telah membuatnya sekompleks mungkin. Berikut daf
 Itu adalah beberapa fitur dan system yang telah saya buat. Mungkin jika anda melihat option pilihan pemain pada device mobile, gambarnya akan terlihat pecah itu karena
 saya menggunakan gambar emoticon. Saya tidak menggunakan gambar HD dikarenakan untuk menghindari copyright, walaupun gambarnya sedikit pecah web appnya tetap bisa digunakan
 dengan maksimal.
+
+
+
+Berikut adalah link untuk menuju web app ini : https://suwitgame.herokuapp.com/
