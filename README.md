@@ -18,3 +18,6 @@ dengan maksimal.
 
 
 Berikut adalah link untuk menuju web app ini : https://suwitgame.herokuapp.com/
+
+
+![lokerlagi](https://user-images.githubusercontent.com/101494015/181904998-08f98a11-0c76-4fac-82f3-85aaff35d074.PNG)
